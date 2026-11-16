@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="AshtonOS — a desktop experience in your browser.">
+<title>AshtonOS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="boot" class="boot"><div class="boot-mark">A</div><div class="boot-name">AshtonOS</div><div class="boot-track"><span></span></div><small>Starting your workspace</small></div>
+<div id="desktop" class="desktop hidden">
+  <div class="wallpaper-glow"></div>
+  <header class="topbar">
+    <button class="top-brand" id="brand-menu"><span class="brand-mark">A</span><span>AshtonOS</span></button>
+    <div class="top-center" id="top-date"></div>
+    <div class="top-right"><span id="network-indicator">● Online</span><button id="top-volume" title="Volume">◖))</button><button id="top-battery" title="Power">▰</button><button id="top-clock"></button></div>
+  </header>
+  <main id="workspace" class="workspace">
+    <div class="desktop-icons" id="desktop-icons">
+      <button class="desktop-icon" data-app="files"><span>📁</span><small>Files</small></button>
+      <button class="desktop-icon" data-app="browser"><span>🌐</span><small>Browser</small></button>
+      <button class="desktop-icon" data-app="calendar"><span>📅</span><small>Calendar</small></button>
+      <button class="desktop-icon" data-app="notes"><span>🗒️</span><small>Notes</small></button>
+      <button class="desktop-icon" data-app="settings"><span>⚙️</span><small>Settings</small></button>
+      <button class="desktop-icon" data-app="computer"><span>💻</span><small>Computer</small></button>
+    </div>
+    <section id="windows" class="windows"></section>
+    <section id="launcher" class="launcher hidden">
+      <div class="launcher-search"><span>⌕</span><input id="app-search" placeholder="Search apps and actions..." autocomplete="off"></div>
+      <div class="launcher-heading">Pinned applications</div><div id="launcher-apps" class="launcher-grid"></div>
+      <div class="launcher-footer"><span>AshtonOS</span><button id="power-button">⏻ Power</button></div>
+    </section>
+    <section id="quick-panel" class="quick-panel hidden"><div class="quick-title">Quick settings</div><div class="quick-toggles"><button data-toggle="wifi">◉<small>Wi-Fi</small></button><button data-toggle="bluetooth">ᛒ<small>Bluetooth</small></button><button data-toggle="focus">◐<small>Focus</small></button><button data-toggle="night">☾<small>Night light</small></button></div><div class="quick-row"><span>Brightness</span><input id="brightness" type="range" min="50" max="130" value="100"></div><div class="quick-row"><span>Volume</span><input id="volume" type="range" min="0" max="100" value="55"></div><div id="quick-status">All systems operational</div></section>
+  </main>
+  <footer class="taskbar"><button class="task-start" id="start-button"><span class="brand-mark">A</span></button><div class="task-pins" id="task-pins"></div><div class="task-running" id="task-running"></div><div class="task-tray"><button id="tray-button">⌃</button><button id="tray-wifi">◉</button><button id="tray-volume">◖))</button><button id="tray-clock"><span id="tray-time">--:--</span><small id="tray-day">---</small></button></div></footer>
+  <div id="toast-area" class="toast-area"></div>
+  <div id="context-menu" class="context-menu hidden"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
